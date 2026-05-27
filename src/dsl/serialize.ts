@@ -1,17 +1,4 @@
-import {
-  Color,
-  Digits,
-  HasColor,
-  HasKind,
-  HasShape,
-  Letter, module,
-  Module,
-  Navestidlo,
-  Part,
-  Question,
-  state,
-  State
-} from './types';
+import {Module, Navestidlo, Part, State} from './types';
 
 
 export type SerializationOptions = {

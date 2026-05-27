@@ -1,8 +1,17 @@
 import {
   Color,
-  Letter, module, Module, Navestidlo, navestidlo, Part, part, State, state,
-  StateEmpty,
-  Question, Digits
+  Digits,
+  Letter,
+  module,
+  Module,
+  Navestidlo,
+  navestidlo,
+  Part,
+  part,
+  Question,
+  State,
+  state,
+  StateEmpty
 } from './types';
 
 

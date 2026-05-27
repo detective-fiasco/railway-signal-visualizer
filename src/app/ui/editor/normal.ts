@@ -1,4 +1,4 @@
-import {Component, input, model, output, signal} from '@angular/core';
+import {Component, input, model, output} from '@angular/core';
 import {EdNavestidlo} from './util';
 import {EditorAction} from './editor';
 import {EditorBar} from './bar';

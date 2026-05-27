@@ -1,6 +1,5 @@
 import {Component, computed, input, output} from '@angular/core';
 import {ActionBar} from '../action/bar';
-import {Color} from '../../../dsl/types';
 
 @Component({
   selector: 'app-editor-bar',

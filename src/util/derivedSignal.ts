@@ -1,4 +1,4 @@
-import {WritableSignal, untracked, signal, effect} from '@angular/core';
+import {effect, signal, untracked, WritableSignal} from '@angular/core';
 
 type UpdateEqualityFn<T> = (oldValue: T, newValue: T) => boolean;
 

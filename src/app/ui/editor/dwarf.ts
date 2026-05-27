@@ -1,8 +1,7 @@
-import {Component, input, model, output, signal} from '@angular/core';
+import {Component, input, model, output} from '@angular/core';
 import {EdNavestidlo} from './util';
 import {EditorAction} from './editor';
 import {EditorBar} from './bar';
-import {Edge} from '../../visualization/edge';
 import {EditorModule} from './module';
 import {ActionSection} from '../action/section';
 
@@ -10,7 +9,6 @@ import {ActionSection} from '../action/section';
   selector: 'app-editor-dwarf',
   imports: [
     EditorBar,
-    Edge,
     EditorModule,
     ActionSection
   ],

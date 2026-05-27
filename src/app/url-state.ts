@@ -1,9 +1,4 @@
-import {
-  Injectable,
-  WritableSignal,
-  effect,
-  signal, untracked,
-} from '@angular/core';
+import {effect, Injectable, signal, untracked, WritableSignal,} from '@angular/core';
 
 @Injectable({
   providedIn: 'root',

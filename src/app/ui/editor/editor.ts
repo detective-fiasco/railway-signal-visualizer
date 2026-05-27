@@ -1,6 +1,6 @@
-import {Component, effect, input, model, signal} from '@angular/core';
+import {Component, effect, model, signal} from '@angular/core';
 import {Module, navestidlo, Navestidlo, Part, part} from '../../../dsl/types';
-import {SerializationOptions, serialize} from '../../../dsl/serialize';
+import {serialize} from '../../../dsl/serialize';
 import {derivedSignal} from '../../../util/derivedSignal';
 import {parse} from '../../../dsl/parse';
 import {format} from '../../../dsl/format';

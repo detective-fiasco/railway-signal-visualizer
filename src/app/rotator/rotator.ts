@@ -1,6 +1,6 @@
 import {Component, contentChildren, effect, input, signal} from '@angular/core';
 
-import { RotatorItem } from './rotator-item';
+import {RotatorItem} from './rotator-item';
 
 
 @Component({

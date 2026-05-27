@@ -1,24 +1,4 @@
-import {Component, signal, computed, inject, effect, untracked} from '@angular/core';
-
-import {ActionBar} from './ui/action/bar';
-import {ActionSection} from './ui/action/section';
-
-import {Section} from './visualization/section';
-import {Edge} from './visualization/edge';
-
-import {Bulb} from './visualization/bulb';
-import {BulbFull} from './visualization/bulb/full';
-import {BulbText} from './visualization/bulb/text';
-
-import {Matrix} from './visualization/matrix';
-import {MatrixText} from './visualization/matrix/text';
-import {MatrixLines} from './visualization/matrix/lines';
-import {MatrixIcon} from './visualization/matrix/icon';
-
-import {Lines} from './visualization/lines';
-
-import {Rotator} from './rotator/rotator';
-import {RotatorItem} from './rotator/rotator-item';
+import {Component, effect, inject} from '@angular/core';
 import {parse} from '../dsl/parse';
 
 
@@ -27,9 +7,6 @@ import {UrlState} from './url-state';
 import {derivedSignal} from '../util/derivedSignal';
 import {format} from '../dsl/format';
 import {Editor} from './ui/editor/editor';
-import {pathFormat} from '@angular-devkit/schematics/src/formats';
-import {serialize} from '../dsl/serialize';
-
 
 
 @Component({
@@ -96,5 +73,4 @@ export class App {
   protected readonly parse = parse;
   protected readonly format = format;
   protected readonly JSON = JSON;
-  protected readonly pathFormat = pathFormat;
 }
