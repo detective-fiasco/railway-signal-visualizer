@@ -1,4 +1,4 @@
-name: Pages
+name: GitHub Pages Deployment
 
 on:
   push:
@@ -12,9 +12,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install and Build
+        run: npm ci
+
       - name: Install and Build
         run: |
-          npm ci
           npx ng build --base-href="/${{ github.event.repository.name }}/"
           cp dist/${{ github.event.repository.name }}/browser/index.html dist/${{ github.event.repository.name }}/browser/404.html
 
