@@ -4,6 +4,8 @@ import {effect, Injectable, signal, untracked, WritableSignal,} from '@angular/c
   providedIn: 'root',
 })
 export class UrlState {
+  private readonly baseHref: string = this.detectBaseHref();
+
   readonly path: WritableSignal<string> = signal(this.readPath());
   readonly hash: WritableSignal<string> = signal(this.readHash());
 
@@ -31,6 +33,12 @@ export class UrlState {
     });
   }
 
+  private detectBaseHref(): string {
+    const baseElement = document.querySelector('base');
+    const href = baseElement?.getAttribute('href') || '/';
+    return href.replace(/^\/+|\/+$/g, '');
+  }
+
   private syncFromLocation = () => {
     const path = this.readPath();
     if (path !== this.path())
@@ -47,7 +55,10 @@ export class UrlState {
   ): void {
     const url = new URL(window.location.href);
 
-    url.pathname = this.normalizePath(path);
+    const base = this.baseHref ? `/${this.baseHref}` : '';
+    const normalizedPath = this.normalizePath(path);
+
+    url.pathname = `${base}/${normalizedPath}`.replace(/\/+/g, '/');
     url.hash = this.normalizeHash(hash);
     const next = url.toString();
 
@@ -62,20 +73,21 @@ export class UrlState {
   }
 
   private readPath(): string {
+    let path = window.location.pathname;
+
+    if (this.baseHref && path.startsWith(`/${this.baseHref}`))
+      path = path.substring(this.baseHref.length + 1);
+
     return decodeURIComponent(
-      window.location.pathname.replace(
-        /^\/+/,
-        '',
-      ),
+      path.replace(/^\/+/, '')
     );
   }
 
   private readHash(): string {
+    let hash = window.location.hash;
+
     return decodeURIComponent(
-      window.location.hash.replace(
-        /^#/,
-        '',
-      ),
+      hash.replace(/^#/, '')
     );
   }
 
