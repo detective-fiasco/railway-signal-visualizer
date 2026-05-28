@@ -23,7 +23,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          npx ng build --base-href="/${{ github.event.repository.name }}/"
+          npx ng build
           cp dist/${{ github.event.repository.name }}/browser/index.html dist/${{ github.event.repository.name }}/browser/404.html
 
       - name: Upload GitHub Pages artifact
