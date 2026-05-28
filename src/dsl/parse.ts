@@ -33,10 +33,10 @@ export function parse(input: string): Navestidlo | null {
 
   const sanitized = input
     .replaceAll(/\s/g, '')
-    .replaceAll(/(^[;|]*)|([;|]*$)/g, '') // FOR BACKWARD COMPATIBILITY
-    .replaceAll(/;\|;/g, '|') // FOR BACKWARD COMPATIBILITY
-    // .replaceAll(/;*\|[;|]*/g, '|')
-    // .replaceAll(/;+/g, ';')
+
+    // FOR BACKWARD COMPATIBILITY
+    .replaceAll(/;$/g, '')
+    .replaceAll(/\+|;\|;/g, '|')
 
   return parseNavestidlo(sanitized);
 
@@ -68,6 +68,8 @@ const MATRIX_OPTIONS: StatePartsingOptions = { unknown: true, line: true, number
 const BACKWARD_COMPATIBILITY: Record<string, string> = {
   "Ymatrix": "matrixY",
   "Wmatrix": "matrixW",
+  "Yline": "lineY",
+  "Gline": "lineG",
   "-": "_"
 }
 
