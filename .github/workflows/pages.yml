@@ -18,10 +18,10 @@ jobs:
           node-version: 24
           cache: npm
 
-      - name: Install and Build
+      - name: Install dependencies
         run: npm ci
 
-      - name: Install and Build
+      - name: Build
         run: |
           npx ng build
           cp dist/${{ github.event.repository.name }}/browser/index.html dist/${{ github.event.repository.name }}/browser/404.html
