@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "railway-signal-visualizer": {
+    "signal-visualizer": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -57,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "railway-signal-visualizer:build:production"
+              "buildTarget": "signal-visualizer:build:production"
             },
             "development": {
-              "buildTarget": "railway-signal-visualizer:build:development"
+              "buildTarget": "signal-visualizer:build:development"
             }
           },
           "defaultConfiguration": "development"
