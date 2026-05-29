@@ -1,5 +1,7 @@
 import {Component, input} from '@angular/core';
-import {ColorOrQuestion} from '../../../dsl/types';
+
+import {ColorOrQuestion} from '../../../util/colorOrQuestion';
+
 
 @Component({
   selector: 'app-bulb-text',

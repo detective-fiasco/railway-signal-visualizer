@@ -1,7 +1,7 @@
 import {Component, computed, input, output, signal} from '@angular/core';
 
 import {ActionButton, Icon} from './button';
-import {ColorOrQuestion} from '../../../dsl/types';
+import {ColorOrQuestion} from '../../../util/colorOrQuestion';
 import {Section} from '../../visualization/section';
 
 

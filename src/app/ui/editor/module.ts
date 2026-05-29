@@ -1,4 +1,6 @@
 import {Component, input} from '@angular/core';
+import {LineState, MatrixState, Module} from '@ormcz/signal-shape-dsl-parser'
+
 import {Bulb} from '../../visualization/bulb';
 import {BulbFull} from '../../visualization/bulb/full';
 import {BulbText} from '../../visualization/bulb/text';
@@ -9,8 +11,7 @@ import {MatrixLines} from '../../visualization/matrix/lines';
 import {MatrixText} from '../../visualization/matrix/text';
 import {Rotator} from '../../rotator/rotator';
 import {RotatorItem} from '../../rotator/rotator-item';
-
-import {ColorOrQuestion, LineState, MatrixState, Module} from '../../../dsl/types'
+import {ColorOrQuestion} from '../../../util/colorOrQuestion';
 import {WithIds} from './util';
 
 @Component({

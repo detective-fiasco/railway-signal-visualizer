@@ -1,5 +1,8 @@
 import {Component, input} from '@angular/core';
-import {ColorOrQuestion, Icon} from '../../../dsl/types';
+import {Icon} from '@ormcz/signal-shape-dsl-parser';
+
+import {ColorOrQuestion} from '../../../util/colorOrQuestion';
+
 
 @Component({
   selector: 'app-matrix-icon',

@@ -1,4 +1,5 @@
-import {Module, Navestidlo, Part} from '../../../dsl/types';
+import {Module, Navestidlo, Part} from '@ormcz/signal-shape-dsl-parser';
+
 
 export function generateId() {
   return Math.random().toString(36).substring(2)

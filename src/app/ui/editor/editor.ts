@@ -1,9 +1,7 @@
 import {Component, effect, model, signal} from '@angular/core';
-import {Module, navestidlo, Navestidlo, Part, part} from '../../../dsl/types';
-import {serialize} from '../../../dsl/serialize';
+import {format, Module, Navestidlo, navestidlo, parse, Part, serialize} from '@ormcz/signal-shape-dsl-parser';
+
 import {derivedSignal} from '../../../util/derivedSignal';
-import {parse} from '../../../dsl/parse';
-import {format} from '../../../dsl/format';
 import {addIds, EdNavestidlo, generateId, PlaceholderModule, WithIds} from './util';
 import {EditorNormal} from './normal';
 import {EditorDwarf} from './dwarf';

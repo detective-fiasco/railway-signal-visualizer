@@ -1,5 +1,6 @@
 import {Component, input, output, signal} from '@angular/core';
-import {ColorOrQuestion} from '../../../dsl/types';
+
+import {ColorOrQuestion} from '../../../util/colorOrQuestion';
 
 export type Icon = 'add' | 'delete' | 'split' | 'join';
 

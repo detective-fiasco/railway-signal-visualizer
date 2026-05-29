@@ -1,11 +1,9 @@
-import {Component, effect, inject} from '@angular/core';
-import {parse} from '../dsl/parse';
-
-
+import {Component, effect, inject} from '@angular/core'
 import {form, FormField} from '@angular/forms/signals';
+import {format, parse} from "@ormcz/signal-shape-dsl-parser";
+
 import {UrlState} from './url-state';
 import {derivedSignal} from '../util/derivedSignal';
-import {format} from '../dsl/format';
 import {Editor} from './ui/editor/editor';
 
 
