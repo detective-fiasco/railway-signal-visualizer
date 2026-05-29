@@ -67,6 +67,7 @@ const MATRIX_OPTIONS: StatePartsingOptions = { unknown: true, line: true, number
 
 const BACKWARD_COMPATIBILITY: Record<string, string> = {
   "Ymatrix": "matrixY",
+  "Gmatrix": "matrixG",
   "Wmatrix": "matrixW",
   "Yline": "lineY",
   "Gline": "lineG",
